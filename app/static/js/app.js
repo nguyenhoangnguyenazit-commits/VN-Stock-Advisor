@@ -168,54 +168,81 @@ async function loadMarketOverview() {
       backendWorking = true;
     }
   } catch (err) {
-    console.info("Using client-side market indices.");
+    console.info("Backend API not reachable. Checking for snapshot dataset.");
   }
 
-  if (!backendWorking) {
+  if (backendWorking) {
+    // Breadth
+    try {
+      const breadthRes = await fetch("/api/market/breadth");
+      if (breadthRes.ok) renderMarketBreadth(await breadthRes.json());
+    } catch (e) {}
+
+    // Foreign Net Flow
+    try {
+      const foreignRes = await fetch("/api/market/foreign-flow");
+      if (foreignRes.ok) renderForeignFlow(await foreignRes.json());
+    } catch (e) {}
+
+    // 20 Universe Stock Quotes
+    try {
+      const stocksRes = await fetch("/api/market/stocks");
+      if (stocksRes.ok) {
+        const stocks = await stocksRes.json();
+        state.universeStocks = stocks;
+        renderWatchlistTable(stocks);
+      }
+    } catch (e) {}
+  } else {
+    // Running in Client-Side Mode (GitHub Pages)
     state.isOfflineMode = true;
-    state.marketIndices = CLIENT_INDICES;
-    renderIndices(CLIENT_INDICES);
-    renderTickerRibbon(CLIENT_INDICES);
-  }
 
-  // Breadth
-  try {
-    const breadthRes = await fetch("/api/market/breadth");
-    if (breadthRes.ok) {
-      renderMarketBreadth(await breadthRes.json());
-    } else {
-      renderMarketBreadth({ ceiling: 1, up: 14, ref: 2, down: 3, floor: 0, total: 20 });
+    // Try fetching the daily updated market_snapshot.json from GitHub Pages
+    try {
+      const snapRes = await fetch("app/static/data/market_snapshot.json?t=" + Date.now());
+      if (snapRes.ok) {
+        const snap = await snapRes.json();
+        state.snapshot = snap;
+        if (snap.indices) state.marketIndices = Object.values(snap.indices);
+        if (snap.quotes) state.universeStocks = Object.values(snap.quotes);
+      }
+    } catch (e) {
+      console.info("Could not fetch market_snapshot.json, falling back to default seed.");
     }
-  } catch (e) {
-    renderMarketBreadth({ ceiling: 1, up: 14, ref: 2, down: 3, floor: 0, total: 20 });
-  }
 
-  // Foreign Net Flow
-  try {
-    const foreignRes = await fetch("/api/market/foreign-flow");
-    if (foreignRes.ok) {
-      renderForeignFlow(await foreignRes.json());
-    } else {
-      renderForeignFlow({ net_value_vnd: 245800000000 });
+    if (!state.marketIndices || !state.marketIndices.length) {
+      state.marketIndices = CLIENT_INDICES;
     }
-  } catch (e) {
-    renderForeignFlow({ net_value_vnd: 245800000000 });
-  }
-
-  // 20 Universe Stock Quotes
-  try {
-    const stocksRes = await fetch("/api/market/stocks");
-    if (stocksRes.ok) {
-      const stocks = await stocksRes.json();
-      state.universeStocks = stocks;
-      renderWatchlistTable(stocks);
-    } else {
+    if (!state.universeStocks || !state.universeStocks.length) {
       state.universeStocks = CLIENT_UNIVERSE;
-      renderWatchlistTable(CLIENT_UNIVERSE);
     }
-  } catch (e) {
-    state.universeStocks = CLIENT_UNIVERSE;
-    renderWatchlistTable(CLIENT_UNIVERSE);
+
+    renderIndices(state.marketIndices);
+    renderTickerRibbon(state.marketIndices);
+    renderWatchlistTable(state.universeStocks);
+
+    // Compute Foreign flow from snapshot
+    let totalForeign = 0;
+    if (state.snapshot && state.snapshot.foreign_trades) {
+      Object.values(state.snapshot.foreign_trades).forEach((f) => {
+        totalForeign += f.net_value_vnd || 0;
+      });
+    } else {
+      totalForeign = 245800000000;
+    }
+    renderForeignFlow({ net_value_vnd: totalForeign });
+
+    // Compute Breadth from active quotes
+    let c = 0, u = 0, r = 0, d = 0, fl = 0;
+    state.universeStocks.forEach((s) => {
+      const st = (s.state || "REF").toUpperCase();
+      if (st === "CEILING") c++;
+      else if (st === "UP") u++;
+      else if (st === "DOWN") d++;
+      else if (st === "FLOOR") fl++;
+      else r++;
+    });
+    renderMarketBreadth({ ceiling: c, up: u, ref: r, down: d, floor: fl, total: state.universeStocks.length });
   }
 }
 
@@ -422,19 +449,28 @@ async function loadStockDetails(symbol) {
 
   // 2. Client-Side Fallback Mode (GitHub Pages)
   if (!quote) {
-    const found = CLIENT_UNIVERSE.find((s) => s.symbol === symbol) || CLIENT_UNIVERSE[0];
-    quote = {
-      symbol: found.symbol,
-      company_name: found.name,
-      exchange: found.exchange,
-      price: found.price,
-      change: found.change,
-      pct_change: found.pct,
-      state: found.state,
-    };
+    if (state.snapshot && state.snapshot.quotes && state.snapshot.quotes[symbol]) {
+      quote = state.snapshot.quotes[symbol];
+    } else {
+      const found = CLIENT_UNIVERSE.find((s) => s.symbol === symbol) || CLIENT_UNIVERSE[0];
+      quote = {
+        symbol: found.symbol,
+        company_name: found.name,
+        exchange: found.exchange,
+        price: found.price,
+        change: found.change,
+        pct_change: found.pct,
+        state: found.state,
+      };
+    }
   }
   if (!bars || !bars.length) {
-    bars = generateClientCandles(symbol, state.historyDays);
+    if (state.snapshot && state.snapshot.history && state.snapshot.history[symbol]) {
+      const allCandles = state.snapshot.history[symbol];
+      bars = allCandles.slice(-state.historyDays);
+    } else {
+      bars = generateClientCandles(symbol, state.historyDays);
+    }
   }
   if (!ind) {
     ind = {
@@ -679,8 +715,8 @@ function runClientSideKnapsack(payload) {
   const risk = payload.risk_level || "MODERATE";
   const userSectors = payload.sectors && payload.sectors.length ? payload.sectors : null;
 
-  // Filter candidates
-  let pool = CLIENT_UNIVERSE;
+  // Filter candidates from live universe or fallback
+  let pool = (state.universeStocks && state.universeStocks.length) ? state.universeStocks : CLIENT_UNIVERSE;
   if (userSectors) {
     const filtered = pool.filter((s) => userSectors.includes(s.sector));
     if (filtered.length > 0) pool = filtered;

@@ -4,15 +4,14 @@
     "VNINDEX": {
       "symbol": "VNINDEX",
       "name": "VN-Index",
-      "value": 1755.61,
-      "change": -11.04,
-      "pct_change": -0.62,
-      "volume": 549131300,
-      "value_vnd": 24101510039825.0,
-      "date": "2026-10-29",
+      "value": 1733.53,
+      "change": -22.08,
+      "pct_change": -1.26,
+      "volume": 389977663,
+      "value_vnd": 16900949453510.0,
+      "date": "2026-10-30",
       "exchange": "HOSE",
       "sparkline": [
-        1737.71,
         1753.2,
         1759.08,
         1753.39,
@@ -31,22 +30,22 @@
         1763.55,
         1761.87,
         1766.65,
-        1755.61
+        1755.61,
+        1733.53
       ],
       "state": "DOWN"
     },
     "VN30INDEX": {
       "symbol": "VN30INDEX",
       "name": "VN30 Index",
-      "value": 1877.18,
-      "change": -13.04,
-      "pct_change": -0.69,
-      "volume": 228351200,
-      "value_vnd": 10716407640400.0,
-      "date": "2026-10-29",
+      "value": 1857.33,
+      "change": -19.85,
+      "pct_change": -1.06,
+      "volume": 155859569,
+      "value_vnd": 7237066332269.0,
+      "date": "2026-10-30",
       "exchange": "HOSE",
       "sparkline": [
-        1875.99,
         1894.46,
         1898.82,
         1894.2,
@@ -65,7 +64,8 @@
         1889.53,
         1884.4,
         1890.22,
-        1877.18
+        1877.18,
+        1857.33
       ],
       "state": "DOWN"
     },
@@ -75,8 +75,8 @@
       "value": 256.61,
       "change": -3.25,
       "pct_change": -1.25,
-      "volume": 35889804,
-      "value_vnd": 230242065111.0,
+      "volume": 32306742,
+      "value_vnd": 207255826616.0,
       "date": "2026-10-29",
       "exchange": "HNX",
       "sparkline": [
@@ -109,8 +109,8 @@
       "value": 124.84,
       "change": -1.14,
       "pct_change": -0.9,
-      "volume": 0,
-      "value_vnd": 0.0,
+      "volume": 22045295,
+      "value_vnd": 68803365695.0,
       "date": "2026-10-29",
       "exchange": "UPCOM",
       "sparkline": [
@@ -168,15 +168,15 @@
       "sector": "Banking",
       "exchange": "HOSE",
       "price": 22350.0,
-      "change": 0.0,
-      "pct_change": 0.0,
+      "change": -11150.0,
+      "pct_change": -33.28,
       "high": 22800.0,
       "low": 22200.0,
       "volume": 23642700,
-      "ref_price": 22350.0,
-      "ceiling_price": 23900.0,
-      "floor_price": 20800.0,
-      "state": "REF",
+      "ref_price": 33500.0,
+      "ceiling_price": 35800,
+      "floor_price": 31200,
+      "state": "FLOOR",
       "date": "2026-10-29",
       "pe": 7.2,
       "pb": 1.1,
@@ -602,14 +602,6 @@
   },
   "history": {
     "VNINDEX": [
-      {
-        "time": "2026-06-23",
-        "open": 1871.92,
-        "high": 1886.6,
-        "low": 1862.29,
-        "close": 1869.04,
-        "volume": 758215200
-      },
       {
         "time": "2026-06-24",
         "open": 1873.19,
@@ -1320,18 +1312,18 @@
         "high": 1769.08,
         "low": 1751.67,
         "close": 1755.61,
-        "volume": 549131300
+        "volume": 624361600
+      },
+      {
+        "time": "2026-10-30",
+        "open": 1755.61,
+        "high": 1755.61,
+        "low": 1733.53,
+        "close": 1733.53,
+        "volume": 389977663
       }
     ],
     "VN30INDEX": [
-      {
-        "time": "2026-06-23",
-        "open": 1992.81,
-        "high": 2018.15,
-        "low": 1986.3,
-        "close": 1995.12,
-        "volume": 351328000
-      },
       {
         "time": "2026-06-24",
         "open": 2005.59,
@@ -2043,6 +2035,14 @@
         "low": 1872.75,
         "close": 1877.18,
         "volume": 228351200
+      },
+      {
+        "time": "2026-10-30",
+        "open": 1877.18,
+        "high": 1877.18,
+        "low": 1857.33,
+        "close": 1857.33,
+        "volume": 155859569
       }
     ],
     "HNX-INDEX": [
@@ -2756,7 +2756,7 @@
         "high": 261.74,
         "low": 255.79,
         "close": 256.61,
-        "volume": 35889804
+        "volume": 32306742
       }
     ],
     "UPCOM-INDEX": [
@@ -3470,7 +3470,7 @@
         "high": 126.1,
         "low": 123.79,
         "close": 124.84,
-        "volume": 0
+        "volume": 22045295
       }
     ],
     "VCB": [

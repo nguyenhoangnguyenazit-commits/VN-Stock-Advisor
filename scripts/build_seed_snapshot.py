@@ -285,6 +285,15 @@ def build_snapshot():
 
     logger.info(f"Snapshot written successfully to {target_path} ({target_path.stat().st_size} bytes)")
 
+    # Also mirror snapshot to app/static/data/ for GitHub Pages static distribution
+    static_data_dir = BASE_DIR / "app" / "static" / "data"
+    static_data_dir.mkdir(parents=True, exist_ok=True)
+    static_target = static_data_dir / "market_snapshot.json"
+    with open(static_target, "w", encoding="utf-8") as f:
+        json.dump(snapshot, f, ensure_ascii=False, indent=2)
+
+    logger.info(f"Mirrored snapshot to {static_target} ({static_target.stat().st_size} bytes)")
+
 
 if __name__ == "__main__":
     build_snapshot()

@@ -1,0 +1,42 @@
+name: Update Vietnamese Market Data Daily
+
+on:
+  # Schedule: 15:30 Vietnam Time (UTC+7) = 08:30 UTC, Monday to Friday
+  schedule:
+    - cron: '30 8 * * 1-5'
+  # Allow manual on-demand trigger from GitHub Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-market-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch and build latest Vietnamese market snapshot
+        run: |
+          python scripts/build_seed_snapshot.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/seeds/market_snapshot.json app/static/data/market_snapshot.json
+          git diff --staged --quiet || (git commit -m "chore(data): auto-update Vietnamese stock market snapshot [skip ci]" && git push)
