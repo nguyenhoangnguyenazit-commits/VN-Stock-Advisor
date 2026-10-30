@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VN-Advisor | Cố Vấn & Dự Báo Thị Trường Chứng Khoán Việt Nam</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%233B82F6'><path d='M3 3v18h18V3H3zm16 16H5V5h14v14zM7 14l3-3 2 2 4-4 1.4 1.4-5.4 5.4-2-2-1.6 1.6L7 14z'/></svg>">
+</head>
+<body class="bg-base text-primary">
+  <div id="app">
+    <!-- Header & Navigation -->
+    <header class="header-container">
+      <!-- Live Market Ticker Ribbon -->
+      <div class="ticker-ribbon" id="ticker-ribbon">
+        <span class="ticker-item"><strong class="state-ref">VNINDEX:</strong> Đang tải...</span>
+        <span class="ticker-item"><strong class="state-ref">VN30:</strong> Đang tải...</span>
+        <span class="ticker-item"><strong class="state-ref">HNX:</strong> Đang tải...</span>
+        <span class="ticker-item"><strong class="state-ref">UPCOM:</strong> Đang tải...</span>
+      </div>
+
+      <!-- Navigation Bar -->
+      <div class="nav-bar">
+        <div class="brand-section">
+          <div class="brand-logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="text-accent-blue"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+            <span>VN-Advisor</span>
+          </div>
+          <span class="brand-badge">FinTech Terminal</span>
+        </div>
+
+        <!-- Primary Navigation Tabs -->
+        <nav class="nav-tabs" role="tablist">
+          <button id="tab-market" class="nav-tab-btn active" role="tab" aria-selected="true" onclick="switchView('market')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Tổng Quan Thị Trường</span>
+          </button>
+          <button id="tab-stock" class="nav-tab-btn" role="tab" aria-selected="false" onclick="switchView('stock')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Phân Tích & Dự Báo</span>
+          </button>
+          <button id="tab-advisory" class="nav-tab-btn" role="tab" aria-selected="false" onclick="switchView('advisory')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>Cố Vấn Danh Mục</span>
+          </button>
+        </nav>
+
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()" title="Chuyển đổi giao diện sáng/tối">
+            🌙 Dark OLED
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- ======================================================================
+           VIEW 1: MARKET OVERVIEW
+           ====================================================================== -->
+      <section id="view-market" class="view-container active">
+        <!-- 4 Major Indices Cards -->
+        <div class="grid-cols-4" id="indices-container">
+          <div class="card index-card" onclick="selectStock('VNINDEX')">
+            <div class="card-header">
+              <span class="card-title">VN-INDEX</span>
+              <span class="badge badge-ref-bg">HOSE</span>
+            </div>
+            <div class="index-value tabular-nums" id="idx-vnindex-val">--</div>
+            <div class="index-change-row tabular-nums" id="idx-vnindex-chg">--</div>
+          </div>
+          <div class="card index-card" onclick="selectStock('VN30INDEX')">
+            <div class="card-header">
+              <span class="card-title">VN30-INDEX</span>
+              <span class="badge badge-ref-bg">HOSE</span>
+            </div>
+            <div class="index-value tabular-nums" id="idx-vn30-val">--</div>
+            <div class="index-change-row tabular-nums" id="idx-vn30-chg">--</div>
+          </div>
+          <div class="card index-card" onclick="selectStock('HNX-INDEX')">
+            <div class="card-header">
+              <span class="card-title">HNX-INDEX</span>
+              <span class="badge badge-ref-bg">HNX</span>
+            </div>
+            <div class="index-value tabular-nums" id="idx-hnx-val">--</div>
+            <div class="index-change-row tabular-nums" id="idx-hnx-chg">--</div>
+          </div>
+          <div class="card index-card" onclick="selectStock('UPCOM-INDEX')">
+            <div class="card-header">
+              <span class="card-title">UPCOM-INDEX</span>
+              <span class="badge badge-ref-bg">UPCOM</span>
+            </div>
+            <div class="index-value tabular-nums" id="idx-upcom-val">--</div>
+            <div class="index-change-row tabular-nums" id="idx-upcom-chg">--</div>
+          </div>
+        </div>
+
+        <!-- Market Breadth & Foreign Capital Flow -->
+        <div class="grid-cols-2">
+          <!-- Market Breadth -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Độ Rộng Thị Trường (20 Cổ Phiếu Trọng Điểm)</span>
+              <span class="badge badge-up-bg" id="breadth-summary">Đang tính toán...</span>
+            </div>
+            <div class="breadth-container">
+              <div class="breadth-bar" id="breadth-bar">
+                <div class="breadth-segment seg-ceil" style="width: 10%;"></div>
+                <div class="breadth-segment seg-up" style="width: 50%;"></div>
+                <div class="breadth-segment seg-ref" style="width: 20%;"></div>
+                <div class="breadth-segment seg-down" style="width: 15%;"></div>
+                <div class="breadth-segment seg-floor" style="width: 5%;"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8rem;" class="tabular-nums">
+                <span class="state-ceil" id="cnt-ceil">🟣 Trần: 0</span>
+                <span class="state-up" id="cnt-up">🟢 Tăng: 0</span>
+                <span class="state-ref" id="cnt-ref">🟡 TC: 0</span>
+                <span class="state-down" id="cnt-down">🔴 Giảm: 0</span>
+                <span class="state-floor" id="cnt-floor">🔵 Sàn: 0</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foreign Capital Flow -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Dòng Tiền Khối Ngoại (Khối Lượng Khối Ngoại Ròng)</span>
+              <span class="badge" id="foreign-net-badge">Đang tải...</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 12px; margin-top: 8px;">
+              <div class="stat-number tabular-nums" id="foreign-total-net" style="font-size: 1.5rem; font-weight: 700;">--</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">Giá trị mua ròng toàn thị trường</div>
+            </div>
+            <div style="margin-top: 12px; font-size: 0.8rem; color: var(--text-muted);" id="foreign-top-summary">
+              Theo dõi biến động dòng vốn ngoại các mã lớn: FPT, HPG, VCB, SSI, MWG.
+            </div>
+          </div>
+        </div>
+
+        <!-- 20 Stocks Market Watchlist Table -->
+        <div class="card">
+          <div class="card-header">
+            <span class="card-title">Bảng Giá 20 Cổ Phiếu Blue-chip Việt Nam (Lô 100 TT120)</span>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Nhấp vào mã bất kỳ để xem phân tích chi tiết</span>
+          </div>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Mã CK</th>
+                  <th>Công Ty</th>
+                  <th>Sàn</th>
+                  <th>Nhóm Ngành</th>
+                  <th style="text-align: right;">Giá Khớp (VND)</th>
+                  <th style="text-align: right;">+/- (VND)</th>
+                  <th style="text-align: right;">% Thay Đổi</th>
+                  <th style="text-align: right;">KL Khớp</th>
+                  <th style="text-align: center;">Trạng Thái</th>
+                </tr>
+              </thead>
+              <tbody id="market-watchlist-tbody">
+                <tr><td colspan="9" style="text-align: center; padding: 24px;">Đang tải dữ liệu trực tiếp...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           VIEW 2: STOCK ANALYSIS & TREND PREDICTION
+           ====================================================================== -->
+      <section id="view-stock" class="view-container hidden">
+        <!-- Stock Control Strip -->
+        <div class="stock-header-strip">
+          <div class="stock-selector-wrap">
+            <select id="stock-ticker-select" class="stock-select-dropdown" onchange="onStockSelectChange(this.value)">
+              <option value="FPT">FPT - Công ty Cổ phần FPT (Công nghệ)</option>
+              <option value="HPG">HPG - Tập đoàn Hòa Phát (Thép)</option>
+              <option value="VCB">VCB - Vietcombank (Ngân hàng)</option>
+              <option value="TCB">TCB - Techcombank (Ngân hàng)</option>
+              <option value="MBB">MBB - Ngân hàng Quân Đội (Ngân hàng)</option>
+              <option value="MWG">MWG - Thế Giới Di Động (Bán lẻ)</option>
+              <option value="SSI">SSI - Chứng khoán SSI (Chứng khoán)</option>
+              <option value="VNM">VNM - Vinamilk (Tiêu dùng)</option>
+              <option value="VIC">VIC - Vingroup (Bất động sản)</option>
+              <option value="VHM">VHM - Vinhomes (Bất động sản)</option>
+            </select>
+            <div id="stock-live-badge-box">
+              <span class="badge badge-up-bg" id="stock-state-badge">HOSE · UP</span>
+            </div>
+          </div>
+
+          <!-- Timeframe Selector -->
+          <div class="timeframe-pills">
+            <button class="timeframe-btn" onclick="setTimeframe(30, this)">1T (30N)</button>
+            <button class="timeframe-btn active" onclick="setTimeframe(90, this)">3T (90N)</button>
+            <button class="timeframe-btn" onclick="setTimeframe(180, this)">6T (180N)</button>
+            <button class="timeframe-btn" onclick="setTimeframe(365, this)">1N (365N)</button>
+          </div>
+        </div>
+
+        <!-- Technical Indicators Quick Stats Grid -->
+        <div class="grid-cols-4" style="margin-bottom: 20px;">
+          <div class="card">
+            <div class="card-header"><span class="card-title">Chỉ Báo RSI (14)</span></div>
+            <div class="stat-number tabular-nums" id="stat-rsi">--</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);" id="stat-rsi-desc">Wilder Smoothing</div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">MACD (12, 26, 9)</span></div>
+            <div class="stat-number tabular-nums" id="stat-macd">--</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);" id="stat-macd-desc">Line / Signal / Hist</div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Bollinger Bands (20, 2)</span></div>
+            <div class="stat-number tabular-nums" id="stat-bb">--</div>
+            <div style="font-size: 0.8rem; color: var(--text-secondary);" id="stat-bb-desc">Upper / Middle / Lower</div>
+          </div>
+          <div class="card">
+            <div class="card-header"><span class="card-title">Điểm Hợp Lưu Kỹ Thuật</span></div>
+            <div class="stat-number tabular-nums" id="stat-confluence">--</div>
+            <div style="font-size: 0.8rem; font-weight: 700;" id="stat-confluence-signal">--</div>
+          </div>
+        </div>
+
+        <!-- Chart Container Box -->
+        <div class="chart-container-box">
+          <div id="tradingview-chart-box"></div>
+        </div>
+
+        <!-- Damped Holt Forecasting & Volatility Cones -->
+        <div class="card" style="margin-bottom: 20px;">
+          <div class="card-header">
+            <span class="card-title">Dự Báo Xu Hướng Định Lượng (Mô Hình Damped Holt & Dải Nón Biến Động)</span>
+            <span class="badge badge-up-bg" id="pred-confidence-badge">Độ Tin Cậy: --%</span>
+          </div>
+          <div class="forecast-card-grid" id="forecast-grid">
+            <div class="forecast-target-box">
+              <div class="forecast-days">Dự phóng 7 Ngày</div>
+              <div class="forecast-price tabular-nums" id="f7-target">-- VND</div>
+              <div class="forecast-return tabular-nums" id="f7-return">--%</div>
+              <div class="confidence-cone-info tabular-nums" id="f7-cone">80%: [--] · 95%: [--]</div>
+            </div>
+            <div class="forecast-target-box" style="border-color: var(--accent-blue);">
+              <div class="forecast-days" style="color: var(--accent-blue);">Dự phóng 14 Ngày (Mục Tiêu Chính)</div>
+              <div class="forecast-price tabular-nums" id="f14-target" style="color: #60A5FA;">-- VND</div>
+              <div class="forecast-return tabular-nums" id="f14-return">--%</div>
+              <div class="confidence-cone-info tabular-nums" id="f14-cone">80%: [--] · 95%: [--]</div>
+            </div>
+            <div class="forecast-target-box">
+              <div class="forecast-days">Dự phóng 30 Ngày</div>
+              <div class="forecast-price tabular-nums" id="f30-target">-- VND</div>
+              <div class="forecast-return tabular-nums" id="f30-return">--%</div>
+              <div class="confidence-cone-info tabular-nums" id="f30-cone">80%: [--] · 95%: [--]</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pivots & Recommended Trade Setup -->
+        <div class="grid-cols-2">
+          <!-- Support & Resistance Matrix -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Ngưỡng Kháng Cự & Hỗ Trợ (Pivot Classical)</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;" class="tabular-nums">
+              <div style="display: flex; justify-content: space-between; padding: 6px 12px; background: rgba(239, 68, 68, 0.1); border-radius: 6px;">
+                <span class="state-down">Kháng cự 2 (R2):</span>
+                <strong id="pivot-r2">-- VND</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 6px 12px; background: rgba(239, 68, 68, 0.05); border-radius: 6px;">
+                <span class="state-down">Kháng cự 1 (R1):</span>
+                <strong id="pivot-r1">-- VND</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 6px 12px; background: rgba(245, 158, 11, 0.1); border-radius: 6px;">
+                <span class="state-ref">Điểm Xoay (Pivot P):</span>
+                <strong id="pivot-p">-- VND</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 6px 12px; background: rgba(16, 185, 129, 0.05); border-radius: 6px;">
+                <span class="state-up">Hỗ trợ 1 (S1):</span>
+                <strong id="pivot-s1">-- VND</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; padding: 6px 12px; background: rgba(16, 185, 129, 0.1); border-radius: 6px;">
+                <span class="state-up">Hỗ trợ 2 (S2):</span>
+                <strong id="pivot-s2">-- VND</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trade Setup Card -->
+          <div class="card">
+            <div class="card-header">
+              <span class="card-title">Chiến Thuật Giao Dịch Đề Xuất (RRR &ge; 1.5)</span>
+              <span class="badge badge-up-bg" id="trade-rrr-badge">RRR: --</span>
+            </div>
+            <div class="trade-setup-grid tabular-nums">
+              <div class="setup-box">
+                <div class="setup-label">Vùng Mua (Entry)</div>
+                <div class="setup-val" id="trade-entry" style="font-size: 0.95rem;">--</div>
+              </div>
+              <div class="setup-box">
+                <div class="setup-label">Cắt Lỗ (Stop Loss)</div>
+                <div class="setup-val state-down" id="trade-sl">--</div>
+              </div>
+              <div class="setup-box">
+                <div class="setup-label">Chốt Lời 1 (TP1)</div>
+                <div class="setup-val state-up" id="trade-tp1">--</div>
+              </div>
+              <div class="setup-box">
+                <div class="setup-label">Chốt Lời 2 (TP2)</div>
+                <div class="setup-val state-ceil" id="trade-tp2">--</div>
+              </div>
+            </div>
+            <div style="margin-top: 14px; font-size: 0.85rem; color: var(--text-secondary);" id="trade-rationale-text">
+              Kỷ luật giao dịch: Tuân thủ tỷ lệ Risk:Reward tối thiểu 1.5, vào lệnh theo lô 100 cổ phiếu.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           VIEW 3: PERSONALIZED ADVISORY CONSOLE
+           ====================================================================== -->
+      <section id="view-advisory" class="view-container hidden">
+        <div class="advisory-layout">
+          <!-- Advisory Configuration Form -->
+          <div class="advisory-form">
+            <h2 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">
+              Thiết Lập Hồ Sơ & Vốn Đầu Tư
+            </h2>
+
+            <form id="advisory-form" onsubmit="handleAdvisorySubmit(event)">
+              <!-- Budget Input -->
+              <div class="form-group">
+                <label class="form-label" for="input-budget">Số Vốn Khả Dụng (VND) *</label>
+                <input type="number" id="input-budget" class="form-input tabular-nums" min="1000000" step="1000000" value="50000000" required>
+                <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">
+                  Gợi ý: 10,000,000 VND · 50,000,000 VND · 100,000,000 VND
+                </div>
+              </div>
+
+              <!-- Risk Profile Selection -->
+              <div class="form-group">
+                <label class="form-label">Khẩu Vị Rủi Ro *</label>
+                <div class="radio-group-boxes">
+                  <label class="radio-box">
+                    <input type="radio" name="risk_level" value="CONSERVATIVE">
+                    <span>Thận Trọng</span>
+                  </label>
+                  <label class="radio-box">
+                    <input type="radio" name="risk_level" value="MODERATE" checked>
+                    <span>Cân Bằng</span>
+                  </label>
+                  <label class="radio-box">
+                    <input type="radio" name="risk_level" value="AGGRESSIVE">
+                    <span>Tăng Trưởng</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Investment Horizon -->
+              <div class="form-group">
+                <label class="form-label">Thời Hạn Đầu Tư</label>
+                <div class="radio-group-boxes">
+                  <label class="radio-box">
+                    <input type="radio" name="horizon" value="SHORT_TERM">
+                    <span>Ngắn Hạn (&lt; 3T)</span>
+                  </label>
+                  <label class="radio-box">
+                    <input type="radio" name="horizon" value="MEDIUM_TERM" checked>
+                    <span>Trung Hạn (3-12T)</span>
+                  </label>
+                  <label class="radio-box">
+                    <input type="radio" name="horizon" value="LONG_TERM">
+                    <span>Dài Hạn (&gt; 1N)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Preferred Sectors Checkboxes -->
+              <div class="form-group">
+                <label class="form-label">Nhóm Ngành Quan Tâm (Tùy Chọn)</label>
+                <div class="sector-checkbox-grid">
+                  <label class="checkbox-label"><input type="checkbox" name="sector" value="TECHNOLOGY" checked> Công Nghệ</label>
+                  <label class="checkbox-label"><input type="checkbox" name="sector" value="BANKING" checked> Ngân Hàng</label>
+                  <label class="checkbox-label"><input type="checkbox" name="sector" value="STEEL" checked> Thép & VLXD</label>
+                  <label class="checkbox-label"><input type="checkbox" name="sector" value="RETAIL"> Bán Lẻ</label>
+                  <label class="checkbox-label"><input type="checkbox" name="sector" value="REAL_ESTATE"> Bất Động Sản</label>
+                  <label class="checkbox-label"><input type="checkbox" name="sector" value="ENERGY"> Năng Lượng / Dầu Khí</label>
+                </div>
+              </div>
+
+              <button type="submit" id="btn-run-advisory" class="btn-primary">
+                Tối Ưu Hóa Danh Mục Knapsack (Lô 100)
+              </button>
+            </form>
+          </div>
+
+          <!-- Advisory Output Display Panel -->
+          <div class="advisory-results-panel">
+            <!-- Balance & Capital Conservation Card -->
+            <div class="balance-card tabular-nums">
+              <div class="balance-stat">
+                <span class="balance-stat-title">Tổng Vốn Khởi Tạo</span>
+                <span class="balance-stat-value" id="adv-budget-display">50,000,000 ₫</span>
+              </div>
+              <div class="balance-stat">
+                <span class="balance-stat-title">Giá Trị Cổ Phiếu Đã Mua</span>
+                <span class="balance-stat-value state-up" id="adv-invested-display">-- ₫</span>
+              </div>
+              <div class="balance-stat">
+                <span class="balance-stat-title">Tiền Mặt Dự Phòng</span>
+                <span class="balance-stat-value state-ref" id="adv-cash-display">-- ₫</span>
+              </div>
+              <div class="balance-stat">
+                <span class="balance-stat-title">Bảo Toàn Ngân Sách</span>
+                <span class="badge badge-up-bg" id="adv-conservation-badge">100% Khớp Lô</span>
+              </div>
+            </div>
+
+            <!-- Asset Allocation Donut Chart -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Cơ Cấu Phân Bổ Tài Sản & Tỷ Trọng Danh Mục</span>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);" id="adv-metrics-summary">Lợi Nhuận Kỳ Vọng: --% · Sharpe: --</span>
+              </div>
+              <div id="apex-donut-box" class="donut-chart-box"></div>
+            </div>
+
+            <!-- Discrete 100-Share Knapsack Picks Table -->
+            <div class="card">
+              <div class="card-header">
+                <span class="card-title">Khuyến Nghị Mua Cụ Thể (Tuân Thủ Tuyệt Đối Lô 100 TT120)</span>
+                <span class="badge badge-ceil-bg">100-Share Lots</span>
+              </div>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Mã CK</th>
+                      <th>Công Ty</th>
+                      <th>Ngành</th>
+                      <th style="text-align: right;">Giá Mua (VND)</th>
+                      <th style="text-align: right;">Số Lô (x100)</th>
+                      <th style="text-align: right;">Số CP</th>
+                      <th style="text-align: right;">Tổng Tiền (VND)</th>
+                      <th style="text-align: right;">Tỷ Trọng (%)</th>
+                      <th style="text-align: center;">Tín Hiệu</th>
+                    </tr>
+                  </thead>
+                  <tbody id="advisory-stocks-tbody">
+                    <tr><td colspan="9" style="text-align: center; padding: 24px;">Nhập số vốn và bấm Tối Ưu Hóa để tạo danh mục.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Strategic Notes & Regulatory Compliance -->
+            <div class="notes-container" id="adv-notes-box">
+              <div class="notes-title">Ghi Chú Chiến Lược & Cảnh Báo Quản Trị Rủi Ro:</div>
+              <ul class="notes-list" id="adv-notes-list">
+                <li>Thuật toán tối ưu hóa Knapsack tự động làm tròn nguyên lô 100 cổ phiếu, triệt tiêu hoàn toàn rủi ro kẹt cổ phiếu lô lẻ.</li>
+                <li>Danh mục duy trì tỷ lệ tiền mặt dự phòng an toàn theo đúng khẩu vị rủi ro đã chọn.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Charting Libraries Scripts -->
+  <script src="/static/vendor/lightweight-charts.standalone.production.js"></script>
+  <script src="/static/vendor/apexcharts.min.js"></script>
+  <!-- Application Core Script -->
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
