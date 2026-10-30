@@ -4,11 +4,11 @@
     "VNINDEX": {
       "symbol": "VNINDEX",
       "name": "VN-Index",
-      "value": 1733.53,
-      "change": -22.08,
-      "pct_change": -1.26,
-      "volume": 389977663,
-      "value_vnd": 16900949453510.0,
+      "value": 1735.32,
+      "change": -20.29,
+      "pct_change": -1.16,
+      "volume": 420485927,
+      "value_vnd": 18241940971041.0,
       "date": "2026-10-30",
       "exchange": "HOSE",
       "sparkline": [
@@ -31,18 +31,18 @@
         1761.87,
         1766.65,
         1755.61,
-        1733.53
+        1735.32
       ],
       "state": "DOWN"
     },
     "VN30INDEX": {
       "symbol": "VN30INDEX",
       "name": "VN30 Index",
-      "value": 1857.33,
-      "change": -19.85,
-      "pct_change": -1.06,
-      "volume": 155859569,
-      "value_vnd": 7237066332269.0,
+      "value": 1858.09,
+      "change": -19.09,
+      "pct_change": -1.02,
+      "volume": 165393289,
+      "value_vnd": 7682890408950.0,
       "date": "2026-10-30",
       "exchange": "HOSE",
       "sparkline": [
@@ -65,7 +65,7 @@
         1884.4,
         1890.22,
         1877.18,
-        1857.33
+        1858.09
       ],
       "state": "DOWN"
     },
@@ -1316,11 +1316,11 @@
       },
       {
         "time": "2026-10-30",
-        "open": 1755.61,
-        "high": 1755.61,
-        "low": 1733.53,
-        "close": 1733.53,
-        "volume": 389977663
+        "open": 1735.32,
+        "high": 1735.32,
+        "low": 1735.32,
+        "close": 1735.32,
+        "volume": 420485927
       }
     ],
     "VN30INDEX": [
@@ -2040,9 +2040,9 @@
         "time": "2026-10-30",
         "open": 1877.18,
         "high": 1877.18,
-        "low": 1857.33,
-        "close": 1857.33,
-        "volume": 155859569
+        "low": 1858.09,
+        "close": 1858.09,
+        "volume": 165393289
       }
     ],
     "HNX-INDEX": [
