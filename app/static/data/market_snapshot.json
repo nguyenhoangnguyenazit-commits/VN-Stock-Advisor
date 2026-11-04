@@ -4,15 +4,14 @@
     "VNINDEX": {
       "symbol": "VNINDEX",
       "name": "VN-Index",
-      "value": 1699.62,
-      "change": -10.4,
-      "pct_change": -0.61,
-      "volume": 514881300,
-      "value_vnd": 21877563877650.0,
-      "date": "2026-11-03",
+      "value": 1733.02,
+      "change": 33.4,
+      "pct_change": 1.97,
+      "volume": 784293700,
+      "value_vnd": 33979916699350.0,
+      "date": "2026-11-04",
       "exchange": "HOSE",
       "sparkline": [
-        1753.39,
         1738.97,
         1735.09,
         1720.98,
@@ -31,22 +30,22 @@
         1755.61,
         1741.62,
         1710.02,
-        1699.62
+        1699.62,
+        1733.02
       ],
-      "state": "DOWN"
+      "state": "UP"
     },
     "VN30INDEX": {
       "symbol": "VN30INDEX",
       "name": "VN30 Index",
-      "value": 1815.6,
-      "change": 2.19,
-      "pct_change": 0.12,
-      "volume": 231562200,
-      "value_vnd": 10510608258000.0,
-      "date": "2026-11-03",
+      "value": 1862.07,
+      "change": 46.47,
+      "pct_change": 2.56,
+      "volume": 298717900,
+      "value_vnd": 13905841001325.0,
+      "date": "2026-11-04",
       "exchange": "HOSE",
       "sparkline": [
-        1894.2,
         1877.0,
         1873.43,
         1869.38,
@@ -65,7 +64,8 @@
         1877.18,
         1855.04,
         1813.41,
-        1815.6
+        1815.6,
+        1862.07
       ],
       "state": "UP"
     },
@@ -75,8 +75,8 @@
       "value": 251.42,
       "change": 0.87,
       "pct_change": 0.35,
-      "volume": 35595502,
-      "value_vnd": 223735527821.0,
+      "volume": 31586640,
+      "value_vnd": 198537825720.0,
       "date": "2026-11-03",
       "exchange": "HNX",
       "sparkline": [
@@ -109,8 +109,8 @@
       "value": 121.85,
       "change": -0.2,
       "pct_change": -0.16,
-      "volume": 0,
-      "value_vnd": 0.0,
+      "volume": 14066499,
+      "value_vnd": 42850072579.0,
       "date": "2026-11-03",
       "exchange": "UPCOM",
       "sparkline": [
@@ -144,22 +144,22 @@
       "company_name": "Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank)",
       "sector": "Banking",
       "exchange": "HOSE",
-      "price": 53500.0,
-      "change": -100.0,
-      "pct_change": -0.19,
-      "high": 54500.0,
-      "low": 53100.0,
-      "volume": 8910500,
-      "ref_price": 53600.0,
-      "ceiling_price": 57300,
-      "floor_price": 49900,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 54800.0,
+      "change": 1300.0,
+      "pct_change": 2.43,
+      "high": 54900.0,
+      "low": 53700.0,
+      "volume": 4883500,
+      "ref_price": 53500.0,
+      "ceiling_price": 57200,
+      "floor_price": 49800,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 14.8,
       "pb": 2.8,
       "roe": 21.5,
       "dividend_yield": 2.5,
-      "foreign_net_value_vnd": -219117050000.0,
+      "foreign_net_value_vnd": -13445110000.0,
       "market_cap_vnd": 318000000000000.0
     },
     "TCB": {
@@ -167,22 +167,22 @@
       "company_name": "Ngân hàng TMCP Kỹ thương Việt Nam (Techcombank)",
       "sector": "Banking",
       "exchange": "HOSE",
-      "price": 21400.0,
-      "change": 0.0,
-      "pct_change": 0.0,
-      "high": 21650.0,
+      "price": 21850.0,
+      "change": 450.0,
+      "pct_change": 2.1,
+      "high": 21900.0,
       "low": 21150.0,
-      "volume": 10786700,
+      "volume": 12234200,
       "ref_price": 21400.0,
       "ceiling_price": 22850,
       "floor_price": 19950,
-      "state": "REF",
-      "date": "2026-11-03",
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 7.2,
       "pb": 1.1,
       "roe": 17.8,
       "dividend_yield": 3.8,
-      "foreign_net_value_vnd": 71805890000.0,
+      "foreign_net_value_vnd": -20917065000.0,
       "market_cap_vnd": 158000000000000.0
     },
     "MBB": {
@@ -190,22 +190,22 @@
       "company_name": "Ngân hàng TMCP Quân đội (MB Bank)",
       "sector": "Banking",
       "exchange": "HOSE",
-      "price": 18900.0,
-      "change": 150.0,
-      "pct_change": 0.8,
-      "high": 18900.0,
-      "low": 18550.0,
-      "volume": 20614600,
-      "ref_price": 18750.0,
-      "ceiling_price": 20050,
-      "floor_price": 17450,
+      "price": 19250.0,
+      "change": 350.0,
+      "pct_change": 1.85,
+      "high": 19300.0,
+      "low": 18700.0,
+      "volume": 19527900,
+      "ref_price": 18900.0,
+      "ceiling_price": 20200,
+      "floor_price": 17600,
       "state": "UP",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "pe": 5.9,
       "pb": 1.0,
       "roe": 22.1,
       "dividend_yield": 4.5,
-      "foreign_net_value_vnd": -257224985000.0,
+      "foreign_net_value_vnd": -198406235000.0,
       "market_cap_vnd": 105000000000000.0
     },
     "BID": {
@@ -213,22 +213,22 @@
       "company_name": "Ngân hàng TMCP Đầu tư và Phát triển Việt Nam (BIDV)",
       "sector": "Banking",
       "exchange": "HOSE",
-      "price": 31700.0,
-      "change": -300.0,
-      "pct_change": -0.94,
-      "high": 32150.0,
-      "low": 31600.0,
-      "volume": 5029600,
-      "ref_price": 32000.0,
-      "ceiling_price": 34200,
-      "floor_price": 29800,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 32450.0,
+      "change": 750.0,
+      "pct_change": 2.37,
+      "high": 32700.0,
+      "low": 31800.0,
+      "volume": 4384800,
+      "ref_price": 31700.0,
+      "ceiling_price": 33900,
+      "floor_price": 29500,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 12.3,
       "pb": 2.1,
       "roe": 18.2,
       "dividend_yield": 2.8,
-      "foreign_net_value_vnd": -65249825000.0,
+      "foreign_net_value_vnd": -2253470000.0,
       "market_cap_vnd": 194000000000000.0
     },
     "CTG": {
@@ -236,22 +236,22 @@
       "company_name": "Ngân hàng TMCP Công thương Việt Nam (VietinBank)",
       "sector": "Banking",
       "exchange": "HOSE",
-      "price": 30050.0,
-      "change": 300.0,
-      "pct_change": 1.01,
-      "high": 30250.0,
-      "low": 29700.0,
-      "volume": 5887400,
-      "ref_price": 29750.0,
-      "ceiling_price": 31800,
-      "floor_price": 27700,
+      "price": 31050.0,
+      "change": 1000.0,
+      "pct_change": 3.33,
+      "high": 31050.0,
+      "low": 30000.0,
+      "volume": 10975700,
+      "ref_price": 30050.0,
+      "ceiling_price": 32150,
+      "floor_price": 27950,
       "state": "UP",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "pe": 7.8,
       "pb": 1.2,
       "roe": 16.9,
       "dividend_yield": 3.2,
-      "foreign_net_value_vnd": 7788400000.0,
+      "foreign_net_value_vnd": 82919270000.0,
       "market_cap_vnd": 165000000000000.0
     },
     "VHM": {
@@ -259,22 +259,22 @@
       "company_name": "Công ty Cổ phần Vinhomes",
       "sector": "Real Estate",
       "exchange": "HOSE",
-      "price": 61900.0,
-      "change": -100.0,
-      "pct_change": -0.16,
-      "high": 63200.0,
-      "low": 61200.0,
-      "volume": 5625700,
-      "ref_price": 62000.0,
-      "ceiling_price": 66300,
-      "floor_price": 57700,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 63200.0,
+      "change": 1300.0,
+      "pct_change": 2.1,
+      "high": 63300.0,
+      "low": 60800.0,
+      "volume": 4951200,
+      "ref_price": 61900.0,
+      "ceiling_price": 66200,
+      "floor_price": 57600,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 8.5,
       "pb": 1.3,
       "roe": 18.4,
       "dividend_yield": 1.8,
-      "foreign_net_value_vnd": 78626650000.0,
+      "foreign_net_value_vnd": 1720080000.0,
       "market_cap_vnd": 270000000000000.0
     },
     "VIC": {
@@ -283,21 +283,21 @@
       "sector": "Real Estate",
       "exchange": "HOSE",
       "price": 234000.0,
-      "change": -8000.0,
-      "pct_change": -3.31,
-      "high": 240000.0,
-      "low": 233100.0,
-      "volume": 1909000,
-      "ref_price": 242000.0,
-      "ceiling_price": 258900,
-      "floor_price": 225100,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "change": 0.0,
+      "pct_change": 0.0,
+      "high": 239000.0,
+      "low": 230100.0,
+      "volume": 1431900,
+      "ref_price": 234000.0,
+      "ceiling_price": 250300,
+      "floor_price": 217700,
+      "state": "REF",
+      "date": "2026-11-04",
       "pe": 18.2,
       "pb": 1.6,
       "roe": 7.5,
       "dividend_yield": 0.0,
-      "foreign_net_value_vnd": -114114020000.0,
+      "foreign_net_value_vnd": -4155740000.0,
       "market_cap_vnd": 92000000000000.0
     },
     "NVL": {
@@ -305,22 +305,22 @@
       "company_name": "Công ty Cổ phần Tập đoàn Đầu tư Địa ốc No Va (Novaland)",
       "sector": "Real Estate",
       "exchange": "HOSE",
-      "price": 10250.0,
-      "change": -100.0,
-      "pct_change": -0.97,
+      "price": 10450.0,
+      "change": 200.0,
+      "pct_change": 1.95,
       "high": 10450.0,
-      "low": 10200.0,
-      "volume": 13908900,
-      "ref_price": 10350.0,
-      "ceiling_price": 11050,
-      "floor_price": 9650,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "low": 10150.0,
+      "volume": 17233600,
+      "ref_price": 10250.0,
+      "ceiling_price": 10950,
+      "floor_price": 9550,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 28.5,
       "pb": 0.9,
       "roe": 3.1,
       "dividend_yield": 0.0,
-      "foreign_net_value_vnd": -5295635000.0,
+      "foreign_net_value_vnd": 1956045000.0,
       "market_cap_vnd": 20000000000000.0
     },
     "KDH": {
@@ -328,22 +328,22 @@
       "company_name": "Công ty Cổ phần Đầu tư và Kinh doanh Nhà Khang Điền",
       "sector": "Real Estate",
       "exchange": "HOSE",
-      "price": 13000.0,
-      "change": -300.0,
-      "pct_change": -2.26,
-      "high": 13450.0,
-      "low": 12750.0,
-      "volume": 12112800,
-      "ref_price": 13300.0,
-      "ceiling_price": 14200,
-      "floor_price": 12400,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 13800.0,
+      "change": 800.0,
+      "pct_change": 6.15,
+      "high": 13800.0,
+      "low": 12950.0,
+      "volume": 11749400,
+      "ref_price": 13000.0,
+      "ceiling_price": 13900,
+      "floor_price": 12100,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 16.4,
       "pb": 1.4,
       "roe": 9.2,
       "dividend_yield": 2.1,
-      "foreign_net_value_vnd": -45595320000.0,
+      "foreign_net_value_vnd": -29151320000.0,
       "market_cap_vnd": 11000000000000.0
     },
     "FPT": {
@@ -351,22 +351,22 @@
       "company_name": "Công ty Cổ phần FPT",
       "sector": "Technology",
       "exchange": "HOSE",
-      "price": 50400.0,
-      "change": 200.0,
-      "pct_change": 0.4,
-      "high": 51700.0,
-      "low": 49550.0,
-      "volume": 9249300,
-      "ref_price": 50200.0,
-      "ceiling_price": 53700,
-      "floor_price": 46700,
-      "state": "UP",
-      "date": "2026-11-03",
+      "price": 53900.0,
+      "change": 3500.0,
+      "pct_change": 6.94,
+      "high": 53900.0,
+      "low": 50400.0,
+      "volume": 12822500,
+      "ref_price": 50400.0,
+      "ceiling_price": 53900,
+      "floor_price": 46900,
+      "state": "CEILING",
+      "date": "2026-11-04",
       "pe": 18.5,
       "pb": 3.4,
       "roe": 26.8,
       "dividend_yield": 3.5,
-      "foreign_net_value_vnd": -35893075000.0,
+      "foreign_net_value_vnd": 183194600000.0,
       "market_cap_vnd": 77000000000000.0
     },
     "MWG": {
@@ -374,22 +374,22 @@
       "company_name": "Công ty Cổ phần Đầu tư Thế Giới Di Động",
       "sector": "Retail / Consumer",
       "exchange": "HOSE",
-      "price": 72300.0,
-      "change": -100.0,
-      "pct_change": -0.14,
-      "high": 72600.0,
-      "low": 71400.0,
-      "volume": 2048900,
-      "ref_price": 72400.0,
-      "ceiling_price": 77400,
-      "floor_price": 67400,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 74500.0,
+      "change": 2200.0,
+      "pct_change": 3.04,
+      "high": 74500.0,
+      "low": 72200.0,
+      "volume": 2700200,
+      "ref_price": 72300.0,
+      "ceiling_price": 77300,
+      "floor_price": 67300,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 15.2,
       "pb": 2.2,
       "roe": 15.6,
       "dividend_yield": 2.2,
-      "foreign_net_value_vnd": -13290000.0,
+      "foreign_net_value_vnd": 11076940000.0,
       "market_cap_vnd": 110000000000000.0
     },
     "MSN": {
@@ -397,22 +397,22 @@
       "company_name": "Công ty Cổ phần Tập đoàn Masan",
       "sector": "Retail / Consumer",
       "exchange": "HOSE",
-      "price": 69400.0,
-      "change": 0.0,
-      "pct_change": 0.0,
-      "high": 70200.0,
-      "low": 68600.0,
-      "volume": 2274000,
+      "price": 72300.0,
+      "change": 2900.0,
+      "pct_change": 4.18,
+      "high": 72300.0,
+      "low": 69300.0,
+      "volume": 5245400,
       "ref_price": 69400.0,
       "ceiling_price": 74200,
       "floor_price": 64600,
-      "state": "REF",
-      "date": "2026-11-03",
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 24.1,
       "pb": 2.5,
       "roe": 11.2,
       "dividend_yield": 1.5,
-      "foreign_net_value_vnd": 29458200000.0,
+      "foreign_net_value_vnd": 174662960000.0,
       "market_cap_vnd": 103000000000000.0
     },
     "VNM": {
@@ -420,22 +420,22 @@
       "company_name": "Công ty Cổ phần Sữa Việt Nam (Vinamilk)",
       "sector": "Retail / Consumer",
       "exchange": "HOSE",
-      "price": 56300.0,
-      "change": 300.0,
-      "pct_change": 0.54,
-      "high": 56500.0,
-      "low": 55900.0,
-      "volume": 1905600,
-      "ref_price": 56000.0,
-      "ceiling_price": 59900,
-      "floor_price": 52100,
+      "price": 57400.0,
+      "change": 1100.0,
+      "pct_change": 1.95,
+      "high": 57400.0,
+      "low": 56400.0,
+      "volume": 3430600,
+      "ref_price": 56300.0,
+      "ceiling_price": 60200,
+      "floor_price": 52400,
       "state": "UP",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "pe": 14.1,
       "pb": 3.5,
       "roe": 27.5,
       "dividend_yield": 6.8,
-      "foreign_net_value_vnd": 1934230000.0,
+      "foreign_net_value_vnd": 25132340000.0,
       "market_cap_vnd": 120000000000000.0
     },
     "HPG": {
@@ -443,22 +443,22 @@
       "company_name": "Công ty Cổ phần Tập đoàn Hòa Phát",
       "sector": "Materials",
       "exchange": "HOSE",
-      "price": 21250.0,
-      "change": 850.0,
-      "pct_change": 4.17,
-      "high": 21400.0,
-      "low": 20400.0,
-      "volume": 32472700,
-      "ref_price": 20400.0,
-      "ceiling_price": 21800,
-      "floor_price": 19000,
+      "price": 21700.0,
+      "change": 450.0,
+      "pct_change": 2.12,
+      "high": 21700.0,
+      "low": 21100.0,
+      "volume": 38465700,
+      "ref_price": 21250.0,
+      "ceiling_price": 22700,
+      "floor_price": 19800,
       "state": "UP",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "pe": 10.8,
       "pb": 1.4,
       "roe": 14.2,
       "dividend_yield": 4.2,
-      "foreign_net_value_vnd": 227186985000.0,
+      "foreign_net_value_vnd": 53947170000.0,
       "market_cap_vnd": 123000000000000.0
     },
     "SSI": {
@@ -466,22 +466,22 @@
       "company_name": "Công ty Cổ phần Chứng khoán SSI",
       "sector": "Securities",
       "exchange": "HOSE",
-      "price": 19150.0,
-      "change": 300.0,
-      "pct_change": 1.59,
-      "high": 19300.0,
-      "low": 18750.0,
-      "volume": 17021500,
-      "ref_price": 18850.0,
-      "ceiling_price": 20150,
-      "floor_price": 17550,
+      "price": 20400.0,
+      "change": 1250.0,
+      "pct_change": 6.53,
+      "high": 20450.0,
+      "low": 19200.0,
+      "volume": 47036100,
+      "ref_price": 19150.0,
+      "ceiling_price": 20450,
+      "floor_price": 17850,
       "state": "UP",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "pe": 11.5,
       "pb": 1.5,
       "roe": 14.8,
       "dividend_yield": 3.8,
-      "foreign_net_value_vnd": -54122450000.0,
+      "foreign_net_value_vnd": 6770800000.0,
       "market_cap_vnd": 39000000000000.0
     },
     "VND": {
@@ -489,22 +489,22 @@
       "company_name": "Công ty Cổ phần Chứng khoán VNDIRECT",
       "sector": "Securities",
       "exchange": "HOSE",
-      "price": 13050.0,
-      "change": -50.0,
-      "pct_change": -0.38,
-      "high": 13400.0,
-      "low": 13050.0,
-      "volume": 6417000,
-      "ref_price": 13100.0,
-      "ceiling_price": 14000,
-      "floor_price": 12200,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 13950.0,
+      "change": 900.0,
+      "pct_change": 6.9,
+      "high": 13950.0,
+      "low": 13100.0,
+      "volume": 21649300,
+      "ref_price": 13050.0,
+      "ceiling_price": 13950,
+      "floor_price": 12150,
+      "state": "CEILING",
+      "date": "2026-11-04",
       "pe": 9.8,
       "pb": 1.1,
       "roe": 12.5,
       "dividend_yield": 3.0,
-      "foreign_net_value_vnd": 9880830000.0,
+      "foreign_net_value_vnd": 39713910000.0,
       "market_cap_vnd": 21000000000000.0
     },
     "GAS": {
@@ -512,22 +512,22 @@
       "company_name": "Tổng Công ty Khí Việt Nam - CTCP (PV GAS)",
       "sector": "Energy / Utilities",
       "exchange": "HOSE",
-      "price": 75400.0,
-      "change": -1600.0,
-      "pct_change": -2.08,
-      "high": 76700.0,
-      "low": 74500.0,
-      "volume": 567300,
-      "ref_price": 77000.0,
-      "ceiling_price": 82300,
-      "floor_price": 71700,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 75600.0,
+      "change": 200.0,
+      "pct_change": 0.27,
+      "high": 76000.0,
+      "low": 74100.0,
+      "volume": 593600,
+      "ref_price": 75400.0,
+      "ceiling_price": 80600,
+      "floor_price": 70200,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 13.9,
       "pb": 2.7,
       "roe": 19.8,
       "dividend_yield": 5.2,
-      "foreign_net_value_vnd": -273350000.0,
+      "foreign_net_value_vnd": -3176450000.0,
       "market_cap_vnd": 137000000000000.0
     },
     "POW": {
@@ -535,22 +535,22 @@
       "company_name": "Tổng Công ty Điện lực Dầu khí Việt Nam (PV Power)",
       "sector": "Energy / Utilities",
       "exchange": "HOSE",
-      "price": 12000.0,
-      "change": -50.0,
-      "pct_change": -0.41,
-      "high": 12150.0,
-      "low": 11950.0,
-      "volume": 3336200,
-      "ref_price": 12050.0,
-      "ceiling_price": 12850,
-      "floor_price": 11250,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 12450.0,
+      "change": 450.0,
+      "pct_change": 3.75,
+      "high": 12450.0,
+      "low": 12000.0,
+      "volume": 5249300,
+      "ref_price": 12000.0,
+      "ceiling_price": 12800,
+      "floor_price": 11200,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 14.5,
       "pb": 0.9,
       "roe": 6.8,
       "dividend_yield": 3.5,
-      "foreign_net_value_vnd": 1966075000.0,
+      "foreign_net_value_vnd": 6065515000.0,
       "market_cap_vnd": 29000000000000.0
     },
     "GVR": {
@@ -558,22 +558,22 @@
       "company_name": "Tập đoàn Công nghiệp Cao su Việt Nam - CTCP",
       "sector": "Energy / Utilities",
       "exchange": "HOSE",
-      "price": 29600.0,
-      "change": 500.0,
-      "pct_change": 1.72,
-      "high": 29750.0,
-      "low": 29150.0,
-      "volume": 1055100,
-      "ref_price": 29100.0,
-      "ceiling_price": 31100,
-      "floor_price": 27100,
+      "price": 30200.0,
+      "change": 600.0,
+      "pct_change": 2.03,
+      "high": 30300.0,
+      "low": 29250.0,
+      "volume": 1356000,
+      "ref_price": 29600.0,
+      "ceiling_price": 31650,
+      "floor_price": 27550,
       "state": "UP",
-      "date": "2026-11-03",
+      "date": "2026-11-04",
       "pe": 17.6,
       "pb": 1.8,
       "roe": 10.5,
       "dividend_yield": 3.0,
-      "foreign_net_value_vnd": -62215000.0,
+      "foreign_net_value_vnd": -1616685000.0,
       "market_cap_vnd": 125000000000000.0
     },
     "REE": {
@@ -581,35 +581,27 @@
       "company_name": "Công ty Cổ phần Cơ Điện Lạnh (REE Corporation)",
       "sector": "Energy / Utilities",
       "exchange": "HOSE",
-      "price": 44850.0,
-      "change": -100.0,
-      "pct_change": -0.22,
-      "high": 45400.0,
-      "low": 44850.0,
-      "volume": 181900,
-      "ref_price": 44950.0,
-      "ceiling_price": 48050,
-      "floor_price": 41850,
-      "state": "DOWN",
-      "date": "2026-11-03",
+      "price": 45600.0,
+      "change": 750.0,
+      "pct_change": 1.67,
+      "high": 45800.0,
+      "low": 45000.0,
+      "volume": 265900,
+      "ref_price": 44850.0,
+      "ceiling_price": 47950,
+      "floor_price": 41750,
+      "state": "UP",
+      "date": "2026-11-04",
       "pe": 11.2,
       "pb": 1.5,
       "roe": 14.0,
       "dividend_yield": 4.0,
-      "foreign_net_value_vnd": -377580000.0,
+      "foreign_net_value_vnd": -45500000.0,
       "market_cap_vnd": 27000000000000.0
     }
   },
   "history": {
     "VNINDEX": [
-      {
-        "time": "2026-06-26",
-        "open": 1857.24,
-        "high": 1873.91,
-        "low": 1854.94,
-        "close": 1871.91,
-        "volume": 446261700
-      },
       {
         "time": "2026-06-29",
         "open": 1868.64,
@@ -1320,18 +1312,18 @@
         "high": 1713.02,
         "low": 1696.23,
         "close": 1699.62,
-        "volume": 514881300
+        "volume": 574868500
+      },
+      {
+        "time": "2026-11-04",
+        "open": 1697.71,
+        "high": 1738.2,
+        "low": 1692.36,
+        "close": 1733.02,
+        "volume": 784293700
       }
     ],
     "VN30INDEX": [
-      {
-        "time": "2026-06-26",
-        "open": 1999.69,
-        "high": 2013.17,
-        "low": 1989.59,
-        "close": 2008.57,
-        "volume": 191159500
-      },
       {
         "time": "2026-06-29",
         "open": 2006.25,
@@ -2043,6 +2035,14 @@
         "low": 1801.9,
         "close": 1815.6,
         "volume": 231562200
+      },
+      {
+        "time": "2026-11-04",
+        "open": 1814.29,
+        "high": 1864.63,
+        "low": 1810.95,
+        "close": 1862.07,
+        "volume": 298717900
       }
     ],
     "HNX-INDEX": [
@@ -2756,7 +2756,7 @@
         "high": 252.37,
         "low": 249.11,
         "close": 251.42,
-        "volume": 35595502
+        "volume": 31586640
       }
     ],
     "UPCOM-INDEX": [
@@ -3470,18 +3470,10 @@
         "high": 122.53,
         "low": 121.57,
         "close": 121.85,
-        "volume": 0
+        "volume": 14066499
       }
     ],
     "VCB": [
-      {
-        "time": "2026-06-26",
-        "open": 61000.0,
-        "high": 61500.0,
-        "low": 60800.0,
-        "close": 61400.0,
-        "volume": 3344300
-      },
       {
         "time": "2026-06-29",
         "open": 61600.0,
@@ -4193,17 +4185,17 @@
         "low": 53100.0,
         "close": 53500.0,
         "volume": 8910500
+      },
+      {
+        "time": "2026-11-04",
+        "open": 53800.0,
+        "high": 54900.0,
+        "low": 53700.0,
+        "close": 54800.0,
+        "volume": 4883500
       }
     ],
     "TCB": [
-      {
-        "time": "2026-06-26",
-        "open": 33400.0,
-        "high": 33450.0,
-        "low": 32900.0,
-        "close": 33400.0,
-        "volume": 10271000
-      },
       {
         "time": "2026-06-29",
         "open": 33300.0,
@@ -4915,17 +4907,17 @@
         "low": 21150.0,
         "close": 21400.0,
         "volume": 10786700
+      },
+      {
+        "time": "2026-11-04",
+        "open": 21400.0,
+        "high": 21900.0,
+        "low": 21150.0,
+        "close": 21850.0,
+        "volume": 12234200
       }
     ],
     "MBB": [
-      {
-        "time": "2026-06-26",
-        "open": 24700.0,
-        "high": 24800.0,
-        "low": 24650.0,
-        "close": 24750.0,
-        "volume": 6906000
-      },
       {
         "time": "2026-06-29",
         "open": 24850.0,
@@ -5637,17 +5629,17 @@
         "low": 18550.0,
         "close": 18900.0,
         "volume": 20614600
+      },
+      {
+        "time": "2026-11-04",
+        "open": 18900.0,
+        "high": 19300.0,
+        "low": 18700.0,
+        "close": 19250.0,
+        "volume": 19527900
       }
     ],
     "BID": [
-      {
-        "time": "2026-06-26",
-        "open": 41950.0,
-        "high": 42100.0,
-        "low": 41700.0,
-        "close": 41700.0,
-        "volume": 3299800
-      },
       {
         "time": "2026-06-29",
         "open": 42050.0,
@@ -6359,17 +6351,17 @@
         "low": 31600.0,
         "close": 31700.0,
         "volume": 5029600
+      },
+      {
+        "time": "2026-11-04",
+        "open": 31800.0,
+        "high": 32700.0,
+        "low": 31800.0,
+        "close": 32450.0,
+        "volume": 4384800
       }
     ],
     "CTG": [
-      {
-        "time": "2026-06-26",
-        "open": 33500.0,
-        "high": 33600.0,
-        "low": 33400.0,
-        "close": 33600.0,
-        "volume": 4005400
-      },
       {
         "time": "2026-06-29",
         "open": 33650.0,
@@ -7081,17 +7073,17 @@
         "low": 29700.0,
         "close": 30050.0,
         "volume": 5887400
+      },
+      {
+        "time": "2026-11-04",
+        "open": 30050.0,
+        "high": 31050.0,
+        "low": 30000.0,
+        "close": 31050.0,
+        "volume": 10975700
       }
     ],
     "VHM": [
-      {
-        "time": "2026-06-26",
-        "open": 157500.0,
-        "high": 163900.0,
-        "low": 156500.0,
-        "close": 162000.0,
-        "volume": 10448300
-      },
       {
         "time": "2026-06-29",
         "open": 158000.0,
@@ -7803,17 +7795,17 @@
         "low": 61200.0,
         "close": 61900.0,
         "volume": 5625700
+      },
+      {
+        "time": "2026-11-04",
+        "open": 61900.0,
+        "high": 63300.0,
+        "low": 60800.0,
+        "close": 63200.0,
+        "volume": 4951200
       }
     ],
     "VIC": [
-      {
-        "time": "2026-06-26",
-        "open": 221500.0,
-        "high": 228900.0,
-        "low": 221500.0,
-        "close": 228000.0,
-        "volume": 2571200
-      },
       {
         "time": "2026-06-29",
         "open": 227000.0,
@@ -8525,17 +8517,17 @@
         "low": 233100.0,
         "close": 234000.0,
         "volume": 1909000
+      },
+      {
+        "time": "2026-11-04",
+        "open": 232500.0,
+        "high": 239000.0,
+        "low": 230100.0,
+        "close": 234000.0,
+        "volume": 1431900
       }
     ],
     "NVL": [
-      {
-        "time": "2026-06-26",
-        "open": 12750.0,
-        "high": 12750.0,
-        "low": 12500.0,
-        "close": 12550.0,
-        "volume": 7449400
-      },
       {
         "time": "2026-06-29",
         "open": 12550.0,
@@ -9247,17 +9239,17 @@
         "low": 10200.0,
         "close": 10250.0,
         "volume": 13908900
+      },
+      {
+        "time": "2026-11-04",
+        "open": 10200.0,
+        "high": 10450.0,
+        "low": 10150.0,
+        "close": 10450.0,
+        "volume": 17233600
       }
     ],
     "KDH": [
-      {
-        "time": "2026-06-26",
-        "open": 21750.0,
-        "high": 21950.0,
-        "low": 21550.0,
-        "close": 21600.0,
-        "volume": 2394400
-      },
       {
         "time": "2026-06-29",
         "open": 21600.0,
@@ -9969,17 +9961,17 @@
         "low": 12750.0,
         "close": 13000.0,
         "volume": 12112800
+      },
+      {
+        "time": "2026-11-04",
+        "open": 12950.0,
+        "high": 13800.0,
+        "low": 12950.0,
+        "close": 13800.0,
+        "volume": 11749400
       }
     ],
     "FPT": [
-      {
-        "time": "2026-06-26",
-        "open": 71300.0,
-        "high": 71300.0,
-        "low": 70300.0,
-        "close": 70800.0,
-        "volume": 4333200
-      },
       {
         "time": "2026-06-29",
         "open": 70700.0,
@@ -10691,17 +10683,17 @@
         "low": 49550.0,
         "close": 50400.0,
         "volume": 9249300
+      },
+      {
+        "time": "2026-11-04",
+        "open": 50600.0,
+        "high": 53900.0,
+        "low": 50400.0,
+        "close": 53900.0,
+        "volume": 12822500
       }
     ],
     "MWG": [
-      {
-        "time": "2026-06-26",
-        "open": 77100.0,
-        "high": 78500.0,
-        "low": 76500.0,
-        "close": 78500.0,
-        "volume": 4859300
-      },
       {
         "time": "2026-06-29",
         "open": 78400.0,
@@ -11413,17 +11405,17 @@
         "low": 71400.0,
         "close": 72300.0,
         "volume": 2048900
+      },
+      {
+        "time": "2026-11-04",
+        "open": 72600.0,
+        "high": 74500.0,
+        "low": 72200.0,
+        "close": 74500.0,
+        "volume": 2700200
       }
     ],
     "MSN": [
-      {
-        "time": "2026-06-26",
-        "open": 71400.0,
-        "high": 71500.0,
-        "low": 70900.0,
-        "close": 71400.0,
-        "volume": 1949700
-      },
       {
         "time": "2026-06-29",
         "open": 71600.0,
@@ -12135,17 +12127,17 @@
         "low": 68600.0,
         "close": 69400.0,
         "volume": 2274000
+      },
+      {
+        "time": "2026-11-04",
+        "open": 69300.0,
+        "high": 72300.0,
+        "low": 69300.0,
+        "close": 72300.0,
+        "volume": 5245400
       }
     ],
     "VNM": [
-      {
-        "time": "2026-06-26",
-        "open": 56800.0,
-        "high": 56800.0,
-        "low": 55900.0,
-        "close": 56300.0,
-        "volume": 3173400
-      },
       {
         "time": "2026-06-29",
         "open": 56500.0,
@@ -12857,17 +12849,17 @@
         "low": 55900.0,
         "close": 56300.0,
         "volume": 1905600
+      },
+      {
+        "time": "2026-11-04",
+        "open": 56600.0,
+        "high": 57400.0,
+        "low": 56400.0,
+        "close": 57400.0,
+        "volume": 3430600
       }
     ],
     "HPG": [
-      {
-        "time": "2026-06-26",
-        "open": 23400.0,
-        "high": 23500.0,
-        "low": 23350.0,
-        "close": 23500.0,
-        "volume": 15468600
-      },
       {
         "time": "2026-06-29",
         "open": 23550.0,
@@ -13579,17 +13571,17 @@
         "low": 20400.0,
         "close": 21250.0,
         "volume": 32472700
+      },
+      {
+        "time": "2026-11-04",
+        "open": 21150.0,
+        "high": 21700.0,
+        "low": 21100.0,
+        "close": 21700.0,
+        "volume": 38465700
       }
     ],
     "SSI": [
-      {
-        "time": "2026-06-26",
-        "open": 26500.0,
-        "high": 26600.0,
-        "low": 26250.0,
-        "close": 26400.0,
-        "volume": 9388400
-      },
       {
         "time": "2026-06-29",
         "open": 26500.0,
@@ -14301,17 +14293,17 @@
         "low": 18750.0,
         "close": 19150.0,
         "volume": 17021500
+      },
+      {
+        "time": "2026-11-04",
+        "open": 19250.0,
+        "high": 20450.0,
+        "low": 19200.0,
+        "close": 20400.0,
+        "volume": 47036100
       }
     ],
     "VND": [
-      {
-        "time": "2026-06-26",
-        "open": 17300.0,
-        "high": 17600.0,
-        "low": 17100.0,
-        "close": 17600.0,
-        "volume": 12825100
-      },
       {
         "time": "2026-06-29",
         "open": 17600.0,
@@ -15023,17 +15015,17 @@
         "low": 13050.0,
         "close": 13050.0,
         "volume": 6417000
+      },
+      {
+        "time": "2026-11-04",
+        "open": 13100.0,
+        "high": 13950.0,
+        "low": 13100.0,
+        "close": 13950.0,
+        "volume": 21649300
       }
     ],
     "GAS": [
-      {
-        "time": "2026-06-26",
-        "open": 77800.0,
-        "high": 78500.0,
-        "low": 77000.0,
-        "close": 77000.0,
-        "volume": 618600
-      },
       {
         "time": "2026-06-29",
         "open": 77200.0,
@@ -15745,17 +15737,17 @@
         "low": 74500.0,
         "close": 75400.0,
         "volume": 567300
+      },
+      {
+        "time": "2026-11-04",
+        "open": 75200.0,
+        "high": 76000.0,
+        "low": 74100.0,
+        "close": 75600.0,
+        "volume": 593600
       }
     ],
     "POW": [
-      {
-        "time": "2026-06-26",
-        "open": 14500.0,
-        "high": 14900.0,
-        "low": 14450.0,
-        "close": 14800.0,
-        "volume": 20921500
-      },
       {
         "time": "2026-06-29",
         "open": 14850.0,
@@ -16467,17 +16459,17 @@
         "low": 11950.0,
         "close": 12000.0,
         "volume": 3336200
+      },
+      {
+        "time": "2026-11-04",
+        "open": 12100.0,
+        "high": 12450.0,
+        "low": 12000.0,
+        "close": 12450.0,
+        "volume": 5249300
       }
     ],
     "GVR": [
-      {
-        "time": "2026-06-26",
-        "open": 32800.0,
-        "high": 33200.0,
-        "low": 32050.0,
-        "close": 32100.0,
-        "volume": 2752100
-      },
       {
         "time": "2026-06-29",
         "open": 32100.0,
@@ -17189,17 +17181,17 @@
         "low": 29150.0,
         "close": 29600.0,
         "volume": 1055100
+      },
+      {
+        "time": "2026-11-04",
+        "open": 29800.0,
+        "high": 30300.0,
+        "low": 29250.0,
+        "close": 30200.0,
+        "volume": 1356000
       }
     ],
     "REE": [
-      {
-        "time": "2026-06-26",
-        "open": 49850.0,
-        "high": 49900.0,
-        "low": 49200.0,
-        "close": 49200.0,
-        "volume": 443300
-      },
       {
         "time": "2026-06-29",
         "open": 49100.0,
@@ -17911,169 +17903,177 @@
         "low": 44850.0,
         "close": 44850.0,
         "volume": 181900
+      },
+      {
+        "time": "2026-11-04",
+        "open": 45250.0,
+        "high": 45800.0,
+        "low": 45000.0,
+        "close": 45600.0,
+        "volume": 265900
       }
     ]
   },
   "foreign_trades": {
     "VCB": {
       "symbol": "VCB",
-      "net_volume": -4077800,
-      "net_value_vnd": -219117050000.0,
+      "net_volume": -246800,
+      "net_value_vnd": -13445110000.0,
       "room_left": 847315308,
       "foreign_ratio": 19.86,
-      "date": "2026-11-03"
+      "date": "2026-11-04"
     },
     "TCB": {
       "symbol": "TCB",
-      "net_volume": 3346000,
-      "net_value_vnd": 71805890000.0,
-      "room_left": 126581761,
-      "foreign_ratio": 20.75,
-      "date": "2026-11-03"
+      "net_volume": -972000,
+      "net_value_vnd": -20917065000.0,
+      "room_left": 127850738,
+      "foreign_ratio": 20.73,
+      "date": "2026-11-04"
     },
     "MBB": {
       "symbol": "MBB",
-      "net_volume": -13795300,
-      "net_value_vnd": -257224985000.0,
-      "room_left": 97904858,
-      "foreign_ratio": 24.2,
-      "date": "2026-11-03"
+      "net_volume": -10426000,
+      "net_value_vnd": -198406235000.0,
+      "room_left": 100097223,
+      "foreign_ratio": 24.17,
+      "date": "2026-11-04"
     },
     "BID": {
       "symbol": "BID",
-      "net_volume": -2048900,
-      "net_value_vnd": -65249825000.0,
-      "room_left": 983897397,
-      "foreign_ratio": 17.35,
-      "date": "2026-11-03"
+      "net_volume": -66300,
+      "net_value_vnd": -2253470000.0,
+      "room_left": 984772160,
+      "foreign_ratio": 17.34,
+      "date": "2026-11-04"
     },
     "CTG": {
       "symbol": "CTG",
-      "net_volume": 258700,
-      "net_value_vnd": 7788400000.0,
-      "room_left": 431064565,
-      "foreign_ratio": 24.45,
-      "date": "2026-11-03"
+      "net_volume": 2691400,
+      "net_value_vnd": 82919270000.0,
+      "room_left": 430306174,
+      "foreign_ratio": 24.46,
+      "date": "2026-11-04"
     },
     "VHM": {
       "symbol": "VHM",
-      "net_volume": 1250300,
-      "net_value_vnd": 78626650000.0,
-      "room_left": 3589685716,
-      "foreign_ratio": 6.3,
-      "date": "2026-11-03"
+      "net_volume": 20700,
+      "net_value_vnd": 1720080000.0,
+      "room_left": 3587785252,
+      "foreign_ratio": 6.33,
+      "date": "2026-11-04"
     },
     "VIC": {
       "symbol": "VIC",
-      "net_volume": -479600,
-      "net_value_vnd": -114114020000.0,
-      "room_left": 3489222419,
-      "foreign_ratio": 3.07,
-      "date": "2026-11-03"
+      "net_volume": -20000,
+      "net_value_vnd": -4155740000.0,
+      "room_left": 3490714616,
+      "foreign_ratio": 3.05,
+      "date": "2026-11-04"
     },
     "NVL": {
       "symbol": "NVL",
-      "net_volume": -515400,
-      "net_value_vnd": -5295635000.0,
+      "net_volume": 187500,
+      "net_value_vnd": 1956045000.0,
       "room_left": 1092490328,
       "foreign_ratio": 3.55,
-      "date": "2026-11-03"
+      "date": "2026-11-04"
     },
     "KDH": {
       "symbol": "KDH",
-      "net_volume": -3510000,
-      "net_value_vnd": -45595320000.0,
-      "room_left": 336045492,
-      "foreign_ratio": 25.54,
-      "date": "2026-11-03"
+      "net_volume": -2203600,
+      "net_value_vnd": -29151320000.0,
+      "room_left": 336066592,
+      "foreign_ratio": 23.01,
+      "date": "2026-11-04"
     },
     "FPT": {
       "symbol": "FPT",
-      "net_volume": -706600,
-      "net_value_vnd": -35893075000.0,
-      "room_left": 421771172,
+      "net_volume": 3472500,
+      "net_value_vnd": 183194600000.0,
+      "room_left": 421773747,
       "foreign_ratio": 26.63,
-      "date": "2026-11-03"
+      "date": "2026-11-04"
     },
     "MWG": {
       "symbol": "MWG",
-      "net_volume": -300,
-      "net_value_vnd": -13290000.0,
-      "room_left": 16641,
-      "foreign_ratio": 49.0,
-      "date": "2026-11-03"
+      "net_volume": 152600,
+      "net_value_vnd": 11076940000.0,
+      "room_left": 154541,
+      "foreign_ratio": 48.99,
+      "date": "2026-11-04"
     },
     "MSN": {
       "symbol": "MSN",
-      "net_volume": 423000,
-      "net_value_vnd": 29458200000.0,
-      "room_left": 1152908167,
-      "foreign_ratio": 26.16,
-      "date": "2026-11-03"
+      "net_volume": 2445600,
+      "net_value_vnd": 174662960000.0,
+      "room_left": 1152668907,
+      "foreign_ratio": 26.18,
+      "date": "2026-11-04"
     },
     "VNM": {
       "symbol": "VNM",
-      "net_volume": 35000,
-      "net_value_vnd": 1934230000.0,
-      "room_left": 1053029780,
-      "foreign_ratio": 49.61,
-      "date": "2026-11-03"
+      "net_volume": 440800,
+      "net_value_vnd": 25132340000.0,
+      "room_left": 1053531369,
+      "foreign_ratio": 49.59,
+      "date": "2026-11-04"
     },
     "HPG": {
       "symbol": "HPG",
-      "net_volume": 10791700,
-      "net_value_vnd": 227186985000.0,
-      "room_left": 2304052195,
-      "foreign_ratio": 21.71,
-      "date": "2026-11-03"
+      "net_volume": 2521800,
+      "net_value_vnd": 53947170000.0,
+      "room_left": 2293470670,
+      "foreign_ratio": 21.84,
+      "date": "2026-11-04"
     },
     "SSI": {
       "symbol": "SSI",
-      "net_volume": -2833300,
-      "net_value_vnd": -54122450000.0,
-      "room_left": 2109345733,
-      "foreign_ratio": 29.77,
-      "date": "2026-11-03"
+      "net_volume": 256200,
+      "net_value_vnd": 6770800000.0,
+      "room_left": 2110017392,
+      "foreign_ratio": 29.74,
+      "date": "2026-11-04"
     },
     "VND": {
       "symbol": "VND",
-      "net_volume": 747300,
-      "net_value_vnd": 9880830000.0,
-      "room_left": 1416261758,
-      "foreign_ratio": 6.97,
-      "date": "2026-11-03"
+      "net_volume": 2897500,
+      "net_value_vnd": 39713910000.0,
+      "room_left": 1415579144,
+      "foreign_ratio": 7.01,
+      "date": "2026-11-04"
     },
     "GAS": {
       "symbol": "GAS",
-      "net_volume": -3800,
-      "net_value_vnd": -273350000.0,
+      "net_volume": -42500,
+      "net_value_vnd": -3176450000.0,
       "room_left": 1130349214,
       "foreign_ratio": 2.15,
-      "date": "2026-11-03"
+      "date": "2026-11-04"
     },
     "POW": {
       "symbol": "POW",
-      "net_volume": 162800,
-      "net_value_vnd": 1966075000.0,
-      "room_left": 1409407714,
-      "foreign_ratio": 4.06,
-      "date": "2026-11-03"
+      "net_volume": 496000,
+      "net_value_vnd": 6065515000.0,
+      "room_left": 1410221314,
+      "foreign_ratio": 4.03,
+      "date": "2026-11-04"
     },
     "GVR": {
       "symbol": "GVR",
-      "net_volume": -2100,
-      "net_value_vnd": -62215000.0,
+      "net_volume": -54200,
+      "net_value_vnd": -1616685000.0,
       "room_left": -21803796,
       "foreign_ratio": 0.55,
-      "date": "2026-11-03"
+      "date": "2026-11-04"
     },
     "REE": {
       "symbol": "REE",
-      "net_volume": -8400,
-      "net_value_vnd": -377580000.0,
+      "net_volume": -1000,
+      "net_value_vnd": -45500000.0,
       "room_left": 0,
       "foreign_ratio": 49.0,
-      "date": "2026-11-03"
+      "date": "2026-11-04"
     }
   }
 }
